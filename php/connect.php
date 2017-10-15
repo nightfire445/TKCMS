@@ -5,7 +5,7 @@ $dbparts = parse_url($url);
 $hostname = $dbparts['host'];
 $username = $dbparts['user'];
 $password = $dbparts['pass'];
-$database = ltrim($dbparts['path'],'/')
+$database = ltrim($dbparts['path'],'/');
 
 try {
     $conn = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
